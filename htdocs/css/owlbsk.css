@@ -1,0 +1,345 @@
+/* Fonts */
+
+body, p, dt, dd {
+	font-family: "Exo 2";
+	/*font-weight: normal;*/
+	font-size: 14pt;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	padding-bottom: 6px;
+	border-bottom: 2px solid #aaa;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.lead {
+	font-size: 2.5rem;
+}
+
+a {
+	color: #e67b00;
+}
+
+a:hover {
+	color: #b36000;
+}
+
+/* Layout */
+
+body {
+	background: linear-gradient(to right, #e6e6e6, #fdfdfd, #fff, #fdfdfd, #e6e6e6);
+}
+
+header, footer, section, figure {
+	margin: 0 !important;
+}
+
+.small-box {
+	padding: 0.5em 0;
+}
+
+.box {
+	padding: 2em 0;
+}
+
+.btn {
+	display: inline-block;
+	position: relative;
+}
+
+.btn:before {
+	content: ".";
+	position: absolute;
+	text-indent: -10000px;
+	top: 1px;
+	left: 2px;
+	right: 2px;
+	height: 2px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background: rgba(255,255,255,0.5);
+}
+
+.btn:after {
+	content: ".";
+	position: absolute;
+	text-indent: -10000px;
+
+	top: 0;
+	left: 1px;
+	right: 1px;
+	height: 50%;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background: rgba(255,255,255,0.1);
+}
+
+
+/* Headline */
+
+#header .menu-title {
+	margin: 0;
+	padding-left: 0.8em;
+}
+
+#header nav {
+	padding: 0;
+}
+
+#header nav a {
+	font-weight: bold;
+	border-bottom: 4px solid rgba(255,255,255,0);
+}
+
+@media (min-width: 992px) {
+	#header nav a {
+		line-height: 3;
+	}
+}
+
+#header nav a:hover {
+	border-bottom: 4px solid #b36000;
+	background: linear-gradient(to top, rgba(200,200,200,0.3), rgba(200,200,200,0));
+}
+
+#headline h1 {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 2px 16px 10px;
+}
+
+#headline h1 big {
+	font-weight: bold;
+}
+
+#headline h4, #headline p.lead {
+	margin-bottom: 0;
+}
+
+.btn-primary {
+	/*background: #e67b00;*/
+	background: linear-gradient(to bottom, #f88000, #b36000);
+	border-color: #b36000;
+}
+
+.btn-primary:hover {
+	background: linear-gradient(to bottom, #ea7800, #a34b00);
+	border-color: #a65000;
+}
+
+
+/* FAQ */
+
+@media (min-width: 992px) {
+	dl {
+		padding-left: 40%;
+	}
+
+	dl dt {
+		float: left;
+		clear: left;
+		display: block;
+		text-align: right;
+		margin-left: -60%;
+		width: 60%;
+		padding-right: 20px;
+	}
+}
+
+.inline-icon {
+	width: 32px;
+	height: 32px;
+	margin-right: 12px;
+}
+
+
+/* Teams and matches */
+
+.teams-large img {
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+	margin-bottom: 36px;
+}
+
+.team .team-logo {
+	float: left;
+}
+
+.team-reverse .team .team-logo {
+	float: right;
+}
+
+.col-team-a {
+	text-align: right;
+}
+
+.col-team-a, .col-team-b {
+	width: 50%;
+}
+
+.col-match-time {
+	width: 60px;
+}
+
+.match-time {
+	text-align: center;
+}
+
+
+/* Teams */
+
+.team-media {
+	font-size: 19px;
+}
+
+.team-media.team-reverse {
+	text-align: right;
+}
+
+.team-media img {
+	max-width: 36px;
+	max-height: 36px;
+}
+
+.team-media.team-reverse img {
+	margin-left: 1rem !important;
+	margin-right: 0 !important;
+}
+
+
+/* Pictures */
+
+figure.overlay-picture {
+	display: block;
+	max-height: 500px;
+	overflow-y: hidden;
+	position: relative;
+}
+
+figure.multi picture {
+	display: block;
+	width: 100%;
+	height: 600px;
+}
+figure.multi img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+
+	opacity: 0;
+	transition: opacity 3s;
+	-webkit-transition: opacity 3s;
+}
+
+figure.multi img.active {
+	opacity: 1;
+}
+
+@media (min-width: 1200px) {
+	figure.overlay-picture {
+		max-height: 600px;
+	}
+}
+
+figure.overlay-picture .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 1px 20px rgba(0,0,0,0.6), 0 1px 60px rgba(0,0,0,0.95);
+}
+
+figure.overlay-picture .overlay a {
+	color: white !important;
+	text-decoration: underline;
+}
+
+figure.overlay-picture .overlay a.btn {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.6);
+	text-decoration: none;
+}
+
+.big {
+	font-size: 30px
+}
+
+figure.faded {
+	background: #001060;
+}
+
+figure.faded img {
+	filter: grayscale(70%) opacity(0.3);
+}
+
+/* Footer */
+
+section.buyOverwatch {
+    margin-top: 80px !important;
+    background-color: #6e7fb1;
+	background: url(../images/footer-cta-bg-desktop.jpg);
+	background-size: auto 100%;
+	background-position: center top;
+}
+
+section.buyOverwatch img.buyOverwatch-boxes {
+	width: 100%;
+	max-width: 400px;
+}
+
+section.buyOverwatch img.buyOverwatch-tracer {
+	margin-top: -80px;
+}
+
+section.black {
+	background: linear-gradient(to right, #282828, #141414, #101010, #141414, #282828);
+	color: white;
+}
+
+section.black h2 {
+	border-bottom-color: #555;
+}
+
+.social-icon {
+	background: black;
+	width: 64px;
+	height: 64px;
+	opacity: 0.7;
+	border: 3px solid #666;
+	border-radius: 32px;
+	transition: 5s;
+	margin-top: 2em;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
+	transition: 0.3s;
+}
+
+#facebook-icon:hover {
+	border-color: #3b5998;
+}
+
+#meetup-icon:hover {
+	border-color: #ed1c40;
+}
+
+#twitter-icon:hover {
+	border-color: #00aced;
+}
