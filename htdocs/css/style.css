@@ -106,6 +106,13 @@ header, footer, section, figure {
 	color: #ffbd30;
 }
 
+.card.starcraft2 .card-body {
+	border-top: 3px solid #004a9d;
+}
+.card.starcraft2 .card-title {
+	color: #004a9d;
+}
+
 
 
 

@@ -29,6 +29,9 @@
 		},
 		"csgo": {
 			"name": "Counter-Strike: GO"
+		},
+		"starcraft2": {
+			"name": "Starcraft II"
 		}
 	},
 	"venues": {
