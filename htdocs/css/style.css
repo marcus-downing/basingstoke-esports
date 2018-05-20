@@ -1,0 +1,178 @@
+/* Layout */
+
+body {
+	background: linear-gradient(to right, #e6e6e6, #fdfdfd, #fff, #fdfdfd, #e6e6e6);
+}
+
+header, footer, section, figure {
+	margin: 0 !important;
+}
+
+.small-box {
+	padding: 0.5em 0;
+}
+
+.box {
+	padding: 2em 0;
+}
+
+/* Headline */
+
+#header .menu-title {
+	margin: 0;
+	padding-left: 0.8em;
+}
+
+#header nav {
+	padding: 0;
+}
+
+#header nav a {
+	font-weight: bold;
+	border-bottom: 4px solid rgba(255,255,255,0);
+}
+
+/* Next showing */
+
+.card {
+	box-shadow: 
+		0 1px 2px rgba(0,0,0,0.1),
+		0 5px 15px rgba(0,0,0,0.05),
+		0 5px 30px rgba(0,0,0,0.05);
+	margin-bottom: 3rem;
+}
+
+.card.border-light {
+	box-shadow: none;
+}
+
+.card-text {
+	margin-bottom: 6px;
+}
+
+.card .card-img-overlay {
+	color: white;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: italic;
+    text-shadow:
+	    0 0 1px rgba(0,0,0,0.7),
+    	0 1px 2px rgba(0,0,0,0.8),
+    	0 1px 8px rgba(0,0,0,0.8),
+    	0 1px 15px rgba(0,0,0,0.95);
+}
+
+.card-title {
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.card.border-light .card-body {
+	border-top: 3px solid #e0e0e0;
+}
+
+.card.overwatch .card-body {
+	border-top: 3px solid #e67b00;
+}
+.card.overwatch .card-title {
+	color: #e67b00;
+}
+
+.card.fortnite .card-body {
+	border-top: 3px solid #76008e;
+}
+.card.fortnite .card-title {
+	color: #76008e;
+}
+
+.card.leagueoflegends .card-body {
+	border-top: 3px solid #c62d3e;
+}
+.card.leagueoflegends .card-title {
+	color: #c62d3e;
+}
+
+.card.pubg .card-body {
+	border-top: 3px solid #bd9d00;
+}
+.card.pubg .card-title {
+	color: #bd9d00;
+}
+
+.card.csgo .card-body {
+	border-top: 3px solid #ffbd30;
+}
+.card.csgo .card-title {
+	color: #ffbd30;
+}
+
+
+
+
+/* FAQ */
+
+@media (min-width: 992px) {
+	dl {
+		padding-left: 40%;
+	}
+
+	dl dt {
+		float: left;
+		clear: left;
+		display: block;
+		text-align: right;
+		margin-left: -60%;
+		width: 60%;
+		padding-right: 20px;
+	}
+}
+
+.inline-icon {
+	width: 32px;
+	height: 32px;
+	margin-right: 12px;
+}
+
+/* Footer */
+
+section.black {
+	background: linear-gradient(to right, #282828, #141414, #101010, #141414, #282828);
+	color: white;
+}
+
+section.black h2 {
+	border-bottom-color: #555;
+}
+
+.social-icon {
+	background: #101010;
+	width: 64px;
+	height: 64px;
+	opacity: 0.7;
+	border: 3px solid #666;
+	border-radius: 32px;
+	transition: 5s;
+	margin-top: 2em;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
+	transition: 0.3s;
+	background: black;
+}
+
+#facebook-icon:hover {
+	border-color: #2455aa;
+}
+
+#meetup-icon:hover {
+	border-color: #ed1c40;
+}
+
+#twitter-icon:hover {
+	border-color: #00aced;
+}
+
+#discord-icon:hover {
+	border-color: #5b75c9;
+}

@@ -1,0 +1,41 @@
+{
+	"defaultGame": "overwatch",
+	"showings": [
+		{
+			"date": "2018-06-02 19:00",
+			"game": "overwatch",
+			"venue": "bakers",
+			"strapline": "Stage 4 - Week 3"
+		},
+		{
+			"date": "2018-06-09 19:00",
+			"game": "overwatch",
+			"venue": "bakers",
+			"strapline": "Stage 4 - Week 4"
+		}
+	],
+	"games": {
+		"overwatch": {
+			"name": "Overwatch League"
+		},
+		"fortnite": {
+			"name": "Fortnite"
+		},
+		"leagueoflegends": {
+			"name": "League of Legends"
+		},
+		"pubg": {
+			"name": "PlayerUnknown's Battlegrounds"
+		},
+		"csgo": {
+			"name": "Counter-Strike: GO"
+		}
+	},
+	"venues": {
+		"bakers": {
+			"name": "The Bakers",
+			"address": [ "Winchester Street", "Basingstoke" ],
+			"url": "https://www.greeneking-pubs.co.uk/pubs/hampshire/bakers/"
+		}
+	}
+}

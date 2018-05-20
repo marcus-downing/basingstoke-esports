@@ -1,0 +1,24 @@
+{
+  "name": "basingstoke-esports",
+  "version": "1.0.0",
+  "description": "Basingstoke eSports",
+  "main": "Makefile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcus-downing/basingstoke-esports.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcus-downing/basingstoke-esports/issues"
+  },
+  "homepage": "https://github.com/marcus-downing/basingstoke-esports#readme",
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "handlebars": "^4.0.11",
+    "lodash": "^4.17.10"
+  }
+}
