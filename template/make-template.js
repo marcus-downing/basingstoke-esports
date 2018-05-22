@@ -44,6 +44,13 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 				return "";
 			}
 		});
+		Handlebars.registerHelper("ifMultiple", function(options) {
+			if (showings.length > 1) {
+				return options.fn(this);
+			} else {
+				return options.inverse(this);
+			}
+		});
 
 		// write the template
 		var template = Handlebars.compile(templateSource);
