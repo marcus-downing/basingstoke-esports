@@ -2,6 +2,11 @@
 	"defaultGame": "overwatch",
 	"showings": [
 		{
+			"date": "2018-05-19 19:30",
+			"game": "overwatch",
+			"venue": "bakers"
+		},
+		{
 			"date": "2018-06-02 18:00",
 			"game": "overwatch",
 			"venue": "bakers",

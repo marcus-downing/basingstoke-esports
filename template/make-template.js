@@ -18,6 +18,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		// console.log(JSON.stringify(data, null, 4));
 		_(data.games).each(function (game, code) { game.code = code; });
 		_(data.venues).each(function (venue, code) { venue.code = code; });
+		
 		var showings = _(data.showings).map(function (showing) {
 			showing.game = data.games[showing.game];
 			showing.venue = data.venues[showing.venue];
@@ -28,10 +29,21 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 			return showing;
 		}).sortBy("date").value();
 
+		// split into future and past
+		var currentDate = dateformat("", "yyyy-mm-dd hh:MM");
+		var showingsPartitioned = _.partition(showings, function (showing) {
+			console.log("Comparing date: "+showing.date+" > "+ currentDate);
+			return showing.date > currentDate;
+		});
+		var futureShowings = showingsPartitioned[0];
+		var pastShowings = _.reverse(showingsPartitioned[1]).slice(0,6);
+
+
 		var nextShowing = ((showings.length == 0) ? null : showings[0]);
 		var templateData = {
 			"nextShowing": nextShowing,
-			"showings": showings,
+			"showings": futureShowings,
+			"pastShowings": pastShowings,
 			"games": data.games,
 			"discord": data.discord,
 		};

@@ -116,6 +116,13 @@
                         </dd>
                     </dl>
 
+                    <dl class="clearfix">
+                        <dt>Do you do any other games?</dt>
+                        <dd>
+                            <p>We're interested in doing other eSports, so if you're interested in one let us know.</p>
+                        </dd>
+                    </dl>
+
                     <dl class="cleafix">
                         <dt>Where is this happening?</dt>
                         <dd>
@@ -340,6 +347,30 @@
         </table>
         <p class='text-center'><a href='https://overwatchleague.com/en-us/schedule'>More details at overwatchleague.com</a></p>
 		-->
+    </section>
+
+    <section id="pastShowings">
+        <div class="container">
+            <div class='box'>
+                <h3>Recent showings</h2>
+            </div>
+
+            <div class="row">
+                {{#each pastShowings}}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card {{this.game.code}}">
+                        <img class="card-img-top" src="images/{{this.game.code}}/game.jpg" alt="{{this.game.name}}">
+                        <div class="card-img-overlay">{{this.dateVeryShort}}</div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.game.name}}</h5>
+                            {{#with this.strapline}}<p class="card-text">{{this}}</p>{{/with}}
+                            <p class="card-text">{{this.dateShort}}, {{this.time}}, {{this.venue.name}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
     </section>
 
 <!--
