@@ -39,7 +39,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		var pastShowings = _.reverse(showingsPartitioned[1]).slice(0,6);
 
 
-		var nextShowing = ((showings.length == 0) ? null : showings[0]);
+		var nextShowing = ((futureShowings.length == 0) ? null : futureShowings[0]);
 		var templateData = {
 			"nextShowing": nextShowing,
 			"showings": futureShowings,
