@@ -32,7 +32,8 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		var templateData = {
 			"nextShowing": nextShowing,
 			"showings": showings,
-			"games": data.games
+			"games": data.games,
+			"discord": data.discord,
 		};
 		// console.log(JSON.stringify(templateData, null, 4));
 
