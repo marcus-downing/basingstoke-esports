@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Basingstoke Esports</title>
+  <link>https://www.basingstoke-esports.com</link>
+  <description>We arrange live showing of Overwatch League and other esports in a Basingstoke venue</description>
+{{#each showings}}
+  <item>
+    <title>{{this.game.name}}, {{this.dateShort}}, {{this.venue.name}}</title>
+    <link>https://www.basingstoke-esports.com/</link>
+    <description>{{this.game.name}}{{#with this.strapline}} - {{this}}{{/with}} - {{dateLong}}, {{this.time}}, {{this.venue.name}}</description>
+  </item>
+  <item>
+    <title>XML Tutorial</title>
+    <link>https://www.w3schools.com/xml</link>
+    <description>New XML tutorial on W3Schools</description>
+  </item>
+{{/each}}
+</channel>
+
+</rss>

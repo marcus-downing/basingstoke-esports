@@ -75,5 +75,18 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		    }
 			console.log("OK");
 		});
+
+		// write the RSS feed
+
+		fs.readFile('rss-template.xml', 'utf-8', function (err, rssTemplateSource) {
+			var rssTemplate = Handlebars.compile(rssTemplateSource);
+			var rssResult = rssTemplate(templateData);
+			fs.writeFile("../htdocs/feed.rss", rssResult, function (err) {
+				if (err) {
+		        return console.log(err);
+				}
+				console.log("RSS feed written");
+			});
+		});
 	});
 });
