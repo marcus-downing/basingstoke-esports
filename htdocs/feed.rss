@@ -5,6 +5,16 @@
   <title>Basingstoke Esports</title>
   <link>https://www.basingstoke-esports.com</link>
   <description>We arrange live showing of Overwatch League and other esports in a Basingstoke venue</description>
+  <item>
+    <title>Overwatch League, 14th July 2018, The Bakers</title>
+    <link>https://www.basingstoke-esports.com/</link>
+    <description>Overwatch League - Quarterfinal 2: London Spitfire vs LA Gladiators - Saturday 14th July 2018, 6:30pm, The Bakers</description>
+  </item>
+  <item>
+    <title>XML Tutorial</title>
+    <link>https://www.w3schools.com/xml</link>
+    <description>New XML tutorial on W3Schools</description>
+  </item>
 </channel>
 
 </rss>
