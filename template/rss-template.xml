@@ -11,11 +11,6 @@
     <link>https://www.basingstoke-esports.com/</link>
     <description>{{this.game.name}}{{#with this.strapline}} - {{this}}{{/with}} - {{dateLong}}, {{this.time}}, {{this.venue.name}}</description>
   </item>
-  <item>
-    <title>XML Tutorial</title>
-    <link>https://www.w3schools.com/xml</link>
-    <description>New XML tutorial on W3Schools</description>
-  </item>
 {{/each}}
 </channel>
 
