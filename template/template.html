@@ -78,6 +78,10 @@
                                     <a class="btn btn-primary btn-lg" href="#next" role="button">Learn more</a>
                                 </p>
                                 {{/with}}
+                                {{#if message}}
+                                <h3>{{message.headline}}</h3>
+                                <p>{{message.body}}</p>
+                                {{/if}}
                             </div>
                         </div>
                     </div>

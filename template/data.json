@@ -1,5 +1,9 @@
 {
 	"defaultGame": "overwatch",
+	"message": {
+		"headline": "On hold",
+		"body": "Basingstoke Esports is currently on hold. Watch this space for more information."
+	},
 	"showings": [
 		{
 			"date": "2018-05-19 19:30",

@@ -18,6 +18,8 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		// console.log(JSON.stringify(data, null, 4));
 		_(data.games).each(function (game, code) { game.code = code; });
 		_(data.venues).each(function (venue, code) { venue.code = code; });
+
+		var message = _.has(data, "message") ? data.message : null;
 		
 		var showings = _(data.showings).map(function (showing) {
 			showing.game = data.games[showing.game];
@@ -41,6 +43,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 
 		var nextShowing = ((futureShowings.length == 0) ? null : futureShowings[0]);
 		var templateData = {
+			"message": message,
 			"nextShowing": nextShowing,
 			"showings": futureShowings,
 			"pastShowings": pastShowings,
