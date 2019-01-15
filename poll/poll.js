@@ -89,9 +89,8 @@ ${contact}
     var mailfile = date+'.msg';
     fs.writeFile(mailfile, message, 'utf8', () => {
     	console.log("File", mailfile, "written.");
+  		res.send('Result saved.');
     });
-
-  	res.send('OK');
 });
 
 
