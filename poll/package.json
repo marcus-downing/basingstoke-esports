@@ -1,0 +1,17 @@
+{
+  "name": "esports-poll",
+  "version": "1.0.0",
+  "description": "Basingstoke Esports Poll",
+  "main": "poll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "nodemailer": "^5.1.1"
+  }
+}
