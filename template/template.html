@@ -65,8 +65,13 @@
                         <div class="row align-items-center">
                             <div class="col-md">
                                 <h1 class="text-right d-none d-md-block">
-                                    <small>{{#if nextShowing}}{{ nextShowing.game.name }}{{else}}Esports{{/if}}</small><br>
-                                    <big>BASINGSTOKE</big>
+                                    {{#if nextShowing}}
+                                        <big>{{ nextShowing.game.name }}</big><br>
+                                        <small>BASINGSTOKE</small>
+                                    {{else}}
+                                        <small>BASINGSTOKE</small><br>
+                                        <big>ESPORTS</big>
+                                    {{/if}}
                                 </h1>
                             </div>
                             <div class="col-md dense">
@@ -81,6 +86,9 @@
                                 {{#if message}}
                                 <h3>{{message.headline}}</h3>
                                 <p>{{message.body}}</p>
+                                {{#if message.button}}
+                                <a class="btn btn-primary btn-lg" href="#voteForReturn" role="button">{{message.button}}</a>
+                                {{/if}}
                                 {{/if}}
                             </div>
                         </div>
@@ -89,6 +97,73 @@
             </div>
         </figure>
     </section>
+
+    {{#if voteForReturn}}
+    <section id='voteForReturn'>
+        <div class='container'>
+            <div class='box'>
+                <h2>Vote for return</h2>
+                <p>Basingstoke Esports is on hold because we weren't able to sustain enough interest in events. We'll resume only when we know there are enough people interested in it.</p>
+                <p>If you'd like Basingstoke Esports to return, please answer these three questions:</p>
+
+                <form method='post' action='/poll'>
+                    <h1>1</h1>
+                    <h3>What sort of events are you interested in?</h3>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-physical" id="mode-physical">
+                            <label class="custom-control-label" for="mode-physical">Physical events in Basingstoke</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-virtual" id="mode-virtual">
+                            <label class="custom-control-label" for="mode-virtual">Virtual meetups and online events</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-competitive" id="mode-competitive">
+                            <label class="custom-control-label" for="mode-competitive">Competitive events and team challenges</label>
+                        </div>
+                    </div>
+
+                    <h1>2</h1>
+                    <h3>Which esports are you interested in?</h3>
+                    <p>Select all that apply:</p>
+                    <div class="form-group game-select">
+                        <div class="row">
+                            {{#each games}}
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card {{code}}">
+                                    <label for="game-{{code}}"><img class="card-img-top" src="images/{{code}}/game.jpg" alt="{{name}}"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-{{code}}" id="game-{{code}}">
+                                            <label class="custom-control-label" for="game-{{code}}">{{name}}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <label for="game-other">Other:</label>
+                                <input name="game-other" id="game-other" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1>3</h1>
+                    <h3>Would you like to be contacted when we make new plans?</h3>
+                    <div class="form-group">
+                        <label for="contact-email">If so, please enter your email address</label>
+                        <input type="email" class="form-control" name="contact-email" id="contact-email" placeholder="name@example.com">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit Vote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {{/if}}
 
     <section id='about'>
         <div class='container'>

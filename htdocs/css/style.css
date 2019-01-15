@@ -42,6 +42,10 @@ header, footer, section, figure {
 	margin-bottom: 3rem;
 }
 
+.card > label {
+	margin-bottom: 0;
+}
+
 .card.border-light {
 	box-shadow: none;
 }
@@ -71,11 +75,18 @@ header, footer, section, figure {
 	border-top: 3px solid #e0e0e0;
 }
 
+.card.selected .card-body, .card.selected .card-body label {
+	color: white;
+}
+
 .card.overwatch .card-body {
 	border-top: 3px solid #e67b00;
 }
 .card.overwatch .card-title {
 	color: #e67b00;
+}
+.card.overwatch.selected .card-body {
+	background: #e67b00;
 }
 
 .card.fortnite .card-body {
@@ -84,12 +95,18 @@ header, footer, section, figure {
 .card.fortnite .card-title {
 	color: #76008e;
 }
+.card.fortnite.selected .card-body {
+	background: #76008e;
+}
 
 .card.leagueoflegends .card-body {
 	border-top: 3px solid #c62d3e;
 }
 .card.leagueoflegends .card-title {
 	color: #c62d3e;
+}
+.card.leagueoflegends.selected .card-body {
+	background: #c62d3e;
 }
 
 .card.pubg .card-body {
@@ -98,12 +115,18 @@ header, footer, section, figure {
 .card.pubg .card-title {
 	color: #bd9d00;
 }
+.card.pubg.selected .card-body {
+	background: #bd9d00;
+}
 
 .card.csgo .card-body {
 	border-top: 3px solid #ffbd30;
 }
 .card.csgo .card-title {
 	color: #ffbd30;
+}
+.card.csgo.selected .card-body {
+	background: #ffbd30;
 }
 
 .card.starcraft2 .card-body {
@@ -112,6 +135,73 @@ header, footer, section, figure {
 .card.starcraft2 .card-title {
 	color: #004a9d;
 }
+.card.starcraft2.selected .card-body {
+	background: #004a9d;
+}
+
+.card.codblops .card-body {
+	border-top: 3px solid #5d6319;
+}
+.card.codblops .card-title {
+	color: #5d6319;
+}
+.card.codblops.selected .card-body {
+	background: #5d6319;
+}
+
+.card.hearthstone .card-body {
+	border-top: 3px solid #f83b8d;
+}
+.card.hearthstone .card-title {
+	color: #f83b8d;
+}
+.card.hearthstone.selected .card-body {
+	background: #f83b8d;
+}
+
+.card.dnd .card-body {
+	border-top: 3px solid #721b00;
+}
+.card.dnd .card-title {
+	color: #721b00;
+}
+.card.dnd.selected .card-body {
+	background: #721b00;
+}
+
+.card.mtga .card-body {
+	border-top: 3px solid #660a16;
+}
+.card.mtga .card-title {
+	color: #660a16;
+}
+.card.mtga.selected .card-body {
+	background: #660a16;
+}
+
+.card.heroesofthestorm .card-body {
+	border-top: 3px solid #4f0076;
+}
+.card.heroesofthestorm .card-title {
+	color: #4f0076;
+}
+.card.heroesofthestorm.selected .card-body {
+	background: #4f0076;
+}
+
+.card.dota2 .card-body {
+	border-top: 3px solid #203f84;
+}
+.card.dota2 .card-title {
+	color: #203f84;
+}
+.card.dota2.selected .card-body {
+	background: #203f84;
+}
+
+
+
+
 
 
 /* Past showings get faded out */

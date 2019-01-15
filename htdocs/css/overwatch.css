@@ -106,6 +106,7 @@ a:hover {
 	/*background: #e67b00;*/
 	background: linear-gradient(to bottom, #f88000, #b36000);
 	border-color: #b36000;
+	color: white;
 }
 
 .btn-primary:hover {
@@ -239,6 +240,7 @@ figure.faded {
 figure.faded img {
 	filter: grayscale(70%) opacity(0.3);
 }
+
 
 /* Footer */
 

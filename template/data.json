@@ -1,9 +1,11 @@
 {
 	"defaultGame": "overwatch",
 	"message": {
-		"headline": "On hold",
-		"body": "Basingstoke Esports is currently on hold. Watch this space for more information."
+		"headline": "Would you like Basingstoke Esports to return?",
+		"body": "",
+		"button": "Vote here"
 	},
+	"voteForReturn": true,
 	"showings": [
 		{
 			"date": "2018-05-19 19:30",
@@ -31,22 +33,52 @@
 	],
 	"games": {
 		"overwatch": {
+			"code": "overwatch",
 			"name": "Overwatch League"
 		},
 		"fortnite": {
+			"code": "fortnite",
 			"name": "Fortnite"
 		},
 		"leagueoflegends": {
+			"code": "leagueoflegends",
 			"name": "League of Legends"
 		},
 		"pubg": {
+			"code": "pubg",
 			"name": "PlayerUnknown's Battlegrounds"
 		},
 		"csgo": {
+			"code": "csgo",
 			"name": "Counter-Strike: GO"
 		},
+		"codblops": {
+			"code": "codblops",
+			"name": "Call of Duty: Black Ops"
+		},
+		"heroesofthestorm": {
+			"code": "heroesofthestorm",
+			"name": "Heroes of the Storm"
+		},
+		"dota2": {
+			"code": "dota2",
+			"name": "DOTA 2"
+		},
 		"starcraft2": {
+			"code": "starcraft2",
 			"name": "Starcraft II"
+		},
+		"mtga": {
+			"code": "mtga",
+			"name": "Magic: The Gathering Arena"
+		},
+		"hearthstone": {
+			"code": "hearthstone",
+			"name": "Hearthstone"
+		},
+		"dnd": {
+			"code": "dnd",
+			"name": "Dungeons & Dragons"
 		}
 	},
 	"venues": {

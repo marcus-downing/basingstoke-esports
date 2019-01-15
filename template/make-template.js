@@ -40,6 +40,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		var futureShowings = showingsPartitioned[0];
 		var pastShowings = _.reverse(showingsPartitioned[1]).slice(0,6);
 
+		var voteForReturn = _.has(data, "voteForReturn") ? data.voteForReturn : false;
 
 		var nextShowing = ((futureShowings.length == 0) ? null : futureShowings[0]);
 		var templateData = {
@@ -48,6 +49,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 			"showings": futureShowings,
 			"pastShowings": pastShowings,
 			"games": data.games,
+			"voteForReturn": voteForReturn,
 			"discord": data.discord,
 		};
 		// console.log(JSON.stringify(templateData, null, 4));

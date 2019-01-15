@@ -57,19 +57,204 @@
                         <div class="row align-items-center">
                             <div class="col-md">
                                 <h1 class="text-right d-none d-md-block">
-                                    <small>Esports</small><br>
-                                    <big>BASINGSTOKE</big>
+                                        <small>BASINGSTOKE</small><br>
+                                        <big>ESPORTS</big>
                                 </h1>
                             </div>
                             <div class="col-md dense">
-                                <h3>On hold</h3>
-                                <p>Basingstoke Esports is currently on hold. Watch this space for more information.</p>
+                                <h3>Would you like Basingstoke Esports to return?</h3>
+                                <p></p>
+                                <a class="btn btn-primary btn-lg" href="#voteForReturn" role="button">Vote here</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </figure>
+    </section>
+
+    <section id='voteForReturn'>
+        <div class='container'>
+            <div class='box'>
+                <h2>Vote for return</h2>
+                <p>Basingstoke Esports is on hold because we weren't able to sustain enough interest in events. We'll resume only when we know there are enough people interested in it.</p>
+                <p>If you'd like Basingstoke Esports to return, please answer these three questions:</p>
+
+                <form method='post' action='/poll'>
+                    <h1>1</h1>
+                    <h3>What sort of events are you interested in?</h3>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-physical" id="mode-physical">
+                            <label class="custom-control-label" for="mode-physical">Physical events in Basingstoke</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-virtual" id="mode-virtual">
+                            <label class="custom-control-label" for="mode-virtual">Virtual meetups and online events</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" name="mode-competitive" id="mode-competitive">
+                            <label class="custom-control-label" for="mode-competitive">Competitive events and team challenges</label>
+                        </div>
+                    </div>
+
+                    <h1>2</h1>
+                    <h3>Which esports are you interested in?</h3>
+                    <p>Select all that apply:</p>
+                    <div class="form-group game-select">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card overwatch">
+                                    <label for="game-overwatch"><img class="card-img-top" src="images/overwatch/game.jpg" alt="Overwatch League"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-overwatch" id="game-overwatch">
+                                            <label class="custom-control-label" for="game-overwatch">Overwatch League</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card fortnite">
+                                    <label for="game-fortnite"><img class="card-img-top" src="images/fortnite/game.jpg" alt="Fortnite"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-fortnite" id="game-fortnite">
+                                            <label class="custom-control-label" for="game-fortnite">Fortnite</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card leagueoflegends">
+                                    <label for="game-leagueoflegends"><img class="card-img-top" src="images/leagueoflegends/game.jpg" alt="League of Legends"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-leagueoflegends" id="game-leagueoflegends">
+                                            <label class="custom-control-label" for="game-leagueoflegends">League of Legends</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card pubg">
+                                    <label for="game-pubg"><img class="card-img-top" src="images/pubg/game.jpg" alt="PlayerUnknown&#x27;s Battlegrounds"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-pubg" id="game-pubg">
+                                            <label class="custom-control-label" for="game-pubg">PlayerUnknown&#x27;s Battlegrounds</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card csgo">
+                                    <label for="game-csgo"><img class="card-img-top" src="images/csgo/game.jpg" alt="Counter-Strike: GO"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-csgo" id="game-csgo">
+                                            <label class="custom-control-label" for="game-csgo">Counter-Strike: GO</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card codblops">
+                                    <label for="game-codblops"><img class="card-img-top" src="images/codblops/game.jpg" alt="Call of Duty: Black Ops"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-codblops" id="game-codblops">
+                                            <label class="custom-control-label" for="game-codblops">Call of Duty: Black Ops</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card heroesofthestorm">
+                                    <label for="game-heroesofthestorm"><img class="card-img-top" src="images/heroesofthestorm/game.jpg" alt="Heroes of the Storm"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-heroesofthestorm" id="game-heroesofthestorm">
+                                            <label class="custom-control-label" for="game-heroesofthestorm">Heroes of the Storm</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card dota2">
+                                    <label for="game-dota2"><img class="card-img-top" src="images/dota2/game.jpg" alt="DOTA 2"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-dota2" id="game-dota2">
+                                            <label class="custom-control-label" for="game-dota2">DOTA 2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card starcraft2">
+                                    <label for="game-starcraft2"><img class="card-img-top" src="images/starcraft2/game.jpg" alt="Starcraft II"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-starcraft2" id="game-starcraft2">
+                                            <label class="custom-control-label" for="game-starcraft2">Starcraft II</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card mtga">
+                                    <label for="game-mtga"><img class="card-img-top" src="images/mtga/game.jpg" alt="Magic: The Gathering Arena"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-mtga" id="game-mtga">
+                                            <label class="custom-control-label" for="game-mtga">Magic: The Gathering Arena</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card hearthstone">
+                                    <label for="game-hearthstone"><img class="card-img-top" src="images/hearthstone/game.jpg" alt="Hearthstone"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-hearthstone" id="game-hearthstone">
+                                            <label class="custom-control-label" for="game-hearthstone">Hearthstone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card dnd">
+                                    <label for="game-dnd"><img class="card-img-top" src="images/dnd/game.jpg" alt="Dungeons &amp; Dragons"></label>
+                                    <div class="card-body">
+                                        <div class="card-title custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="game-dnd" id="game-dnd">
+                                            <label class="custom-control-label" for="game-dnd">Dungeons &amp; Dragons</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <label for="game-other">Other:</label>
+                                <input name="game-other" id="game-other" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1>3</h1>
+                    <h3>Would you like to be contacted when we make new plans?</h3>
+                    <div class="form-group">
+                        <label for="contact-email">If so, please enter your email address</label>
+                        <input type="email" class="form-control" name="contact-email" id="contact-email" placeholder="name@example.com">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit Vote</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id='about'>
@@ -423,10 +608,58 @@
 					</div>
 				</div>
 	            <div class="col-sm-6 col-lg-4">
+					<div class="card codblops">
+						<img class="card-img-top" src="images/codblops/game.jpg" alt="Call of Duty: Black Ops">
+						<div class="card-body">
+							<h5 class="card-title">Call of Duty: Black Ops</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
+					<div class="card heroesofthestorm">
+						<img class="card-img-top" src="images/heroesofthestorm/game.jpg" alt="Heroes of the Storm">
+						<div class="card-body">
+							<h5 class="card-title">Heroes of the Storm</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
+					<div class="card dota2">
+						<img class="card-img-top" src="images/dota2/game.jpg" alt="DOTA 2">
+						<div class="card-body">
+							<h5 class="card-title">DOTA 2</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
 					<div class="card starcraft2">
 						<img class="card-img-top" src="images/starcraft2/game.jpg" alt="Starcraft II">
 						<div class="card-body">
 							<h5 class="card-title">Starcraft II</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
+					<div class="card mtga">
+						<img class="card-img-top" src="images/mtga/game.jpg" alt="Magic: The Gathering Arena">
+						<div class="card-body">
+							<h5 class="card-title">Magic: The Gathering Arena</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
+					<div class="card hearthstone">
+						<img class="card-img-top" src="images/hearthstone/game.jpg" alt="Hearthstone">
+						<div class="card-body">
+							<h5 class="card-title">Hearthstone</h5>
+						</div>
+					</div>
+				</div>
+	            <div class="col-sm-6 col-lg-4">
+					<div class="card dnd">
+						<img class="card-img-top" src="images/dnd/game.jpg" alt="Dungeons &amp; Dragons">
+						<div class="card-body">
+							<h5 class="card-title">Dungeons &amp; Dragons</h5>
 						</div>
 					</div>
 				</div>
