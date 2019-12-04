@@ -182,12 +182,12 @@ figure.overlay-picture {
 	position: relative;
 }
 
-figure.multi picture {
+figure.multi > picture {
 	display: block;
 	width: 100%;
 	height: 600px;
 }
-figure.multi img {
+figure.multi > picture img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -199,7 +199,7 @@ figure.multi img {
 	-webkit-transition: opacity 3s;
 }
 
-figure.multi img.active {
+figure.multi > picture img.active {
 	opacity: 1;
 }
 

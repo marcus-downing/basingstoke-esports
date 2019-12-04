@@ -1,7 +1,11 @@
 /* Layout */
 
 body {
-	background: linear-gradient(to right, #e6e6e6, #fdfdfd, #fff, #fdfdfd, #e6e6e6);
+	background: linear-gradient(to right, #f0f0f0, #fafafa, #fcfcfc, #fafafa, #f0f0f0);
+}
+
+main {
+	background-image: url(../images/tile.png);
 }
 
 header, footer, section, figure {
@@ -47,11 +51,18 @@ header, footer, section, figure {
 }
 
 .card.border-light {
-	box-shadow: none;
+	/*box-shadow: none;*/
+	box-shadow:
+		0 1px 2px rgba(0,0,0,0.05),
+		0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card-text {
 	margin-bottom: 6px;
+}
+
+.card-text.strapline {
+	font-size: 17pt;
 }
 
 .card .card-img-overlay {
@@ -79,6 +90,19 @@ header, footer, section, figure {
 	color: white;
 }
 
+.card.nextShowing {
+	border: 2px solid #e0e0e0;
+	border-radius: 0.3rem;
+	box-shadow: 
+		0 1px 2px rgba(0,0,0,0.2),
+		0 5px 15px rgba(0,0,0,0.15),
+		0 5px 30px rgba(0,0,0,0.1);
+}
+
+
+.card.overwatch.nextShowing {
+	border-color: #e67b00;
+}
 .card.overwatch .card-body {
 	border-top: 3px solid #e67b00;
 }
@@ -261,6 +285,12 @@ section.black {
 
 section.black h2 {
 	border-bottom-color: #555;
+}
+
+section.white {
+	background: linear-gradient(to right, #f8f8f8, #fdfdfd, #fff, #fdfdfd, #f8f8f8);
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .social-icon {

@@ -21,13 +21,17 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 
 		var message = _.has(data, "message") ? data.message : null;
 		
-		var showings = _(data.showings).map(function (showing) {
+		var showings = _(data.showings).filter(function (showing) {
+			var include = _.has(showing, "include") ? showing.include : true;
+			return include;
+		}).map(function (showing) {
 			showing.game = data.games[showing.game];
 			showing.venue = data.venues[showing.venue];
 			showing.dateVeryShort = dateformat(showing.date, "dS mmm");
-			showing.dateShort = dateformat(showing.date, "dS mmmm yyyy");
+			showing.dateShort = dateformat(showing.date, "ddd dS mmm yyyy");
 			showing.dateLong = dateformat(showing.date, "dddd dS mmmm yyyy");
 			showing.time = dateformat(showing.date, "h:MMtt").replace(":00", "");
+			showing.isNext = false;
 			return showing;
 		}).sortBy("date").value();
 
@@ -38,19 +42,21 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 			return showing.date > currentDate;
 		});
 		var futureShowings = showingsPartitioned[0];
-		var pastShowings = _.reverse(showingsPartitioned[1]).slice(0,6);
+		var pastShowings = _.reverse(showingsPartitioned[1]).slice(0,9);
 
-		var voteForReturn = _.has(data, "voteForReturn") ? data.voteForReturn : false;
+		var showSurvey = _.has(data, "showSurvey") ? data.showSurvey : false;
 
 		var nextShowing = ((futureShowings.length == 0) ? null : futureShowings[0]);
+		nextShowing.isNext = true;
 		var templateData = {
 			"message": message,
 			"nextShowing": nextShowing,
 			"showings": futureShowings,
 			"pastShowings": pastShowings,
 			"games": data.games,
-			"voteForReturn": voteForReturn,
+			"showSurvey": showSurvey,
 			"discord": data.discord,
+			"nextVenue": nextShowing.venue,
 		};
 		// console.log(JSON.stringify(templateData, null, 4));
 

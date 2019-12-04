@@ -1,11 +1,12 @@
 {
 	"defaultGame": "overwatch",
 	"message": {
+		"show": false,
 		"headline": "Would you like Basingstoke Esports to return?",
 		"body": "",
 		"button": "Vote here"
 	},
-	"voteForReturn": true,
+	"showSurvey": true,
 	"showings": [
 		{
 			"date": "2018-05-19 19:30",
@@ -29,6 +30,42 @@
 			"game": "overwatch",
 			"venue": "bakers",
 			"strapline": "Quarterfinal 2: London Spitfire vs LA Gladiators"
+		},
+
+
+		{
+			"date": "2020-02-08 17:00",
+			"game": "overwatch",
+			"venue": "whitehart",
+			"strapline": "Start of the 2020 season"
+		},
+		{
+			"date": "2020-03-14 18:00",
+			"game": "overwatch",
+			"venue": "whitehart",
+			"strapline": "Week 6",
+			"include": false
+		},
+		{
+			"date": "2020-03-15 18:00",
+			"game": "overwatch",
+			"venue": "whitehart",
+			"strapline": "Week 6",
+			"include": false
+		},
+		{
+			"date": "2020-04-04 16:00",
+			"game": "overwatch",
+			"venue": "whitehart",
+			"strapline": "Week 9",
+			"include": false
+		},
+		{
+			"date": "2020-04-05 16:00",
+			"game": "overwatch",
+			"venue": "whitehart",
+			"strapline": "Week 9",
+			"include": false
 		}
 	],
 	"games": {
@@ -85,7 +122,14 @@
 		"bakers": {
 			"name": "The Bakers",
 			"address": [ "Winchester Street", "Basingstoke" ],
-			"url": "https://www.greeneking-pubs.co.uk/pubs/hampshire/bakers/"
+			"url": "https://www.greeneking-pubs.co.uk/pubs/hampshire/bakers/",
+			"q": "Bakers+RG21+7ED"
+		},
+		"whitehart": {
+			"name": "The White Hart",
+			"address": [ "London Road", "Basingstoke", "RG21 4AE" ],
+			"url": "https://www.thewhitehartbasingstoke.com/",
+			"q": "White Hart+RG21+4AE"
 		}
 	},
 	"discord": "https://discord.gg/e9Ad27C"
