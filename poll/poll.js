@@ -86,10 +86,11 @@ ${contact}
 
 	// console.log(message);
     var date = moment().format('YYYY-MM-DD_HH-mm-ss');
-    var mailfile = date+'.msg';
+    var mailfile = "mail/"+date+'.msg';
     fs.writeFile(mailfile, message, 'utf8', () => {
     	console.log("File", mailfile, "written.");
   		res.send('Result saved.');
+
     });
 });
 
