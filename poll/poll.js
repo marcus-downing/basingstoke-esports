@@ -24,7 +24,7 @@ app.post('/poll', (req, res) => {
     // Modes
     var modes = [];
     var m = {
-    	'physical': 'Physical events in Basingstoke',
+    	'physical': 'Meet-ups in Basingstoke',
 		'virtual': 'Virtual meetups and online events',
 		'competitive': 'Competitive events and team challenges'
     };
