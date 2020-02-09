@@ -27,7 +27,7 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		}).map(function (showing) {
 			showing.game = data.games[showing.game];
 			showing.venue = data.venues[showing.venue];
-			showing.dateVeryShort = dateformat(showing.date, "dS mmm");
+			showing.dateVeryShort = dateformat(showing.date, "dS mmm yyyy");
 			showing.dateShort = dateformat(showing.date, "ddd dS mmm yyyy");
 			showing.dateLong = dateformat(showing.date, "dddd dS mmmm yyyy");
 			showing.time = dateformat(showing.date, "h:MMtt").replace(":00", "");
@@ -47,16 +47,18 @@ fs.readFile('template.html', 'utf-8', function(err, templateSource) {
 		var showSurvey = _.has(data, "showSurvey") ? data.showSurvey : false;
 
 		var nextShowing = ((futureShowings.length == 0) ? null : futureShowings[0]);
-		nextShowing.isNext = true;
+		if (nextShowing) {
+			nextShowing.isNext = true;
+		}
 		var templateData = {
 			"message": message,
-			"nextShowing": nextShowing,
+			"nextShowing": nextShowing ? nextShowing : false,
 			"showings": futureShowings,
 			"pastShowings": pastShowings,
 			"games": data.games,
 			"showSurvey": showSurvey,
 			"discord": data.discord,
-			"nextVenue": nextShowing.venue,
+			"nextVenue": nextShowing ? nextShowing.venue : '',
 		};
 		// console.log(JSON.stringify(templateData, null, 4));
 
